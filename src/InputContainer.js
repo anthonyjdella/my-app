@@ -9,10 +9,10 @@ class InputContainer extends React.Component {
 
     render() {
         return (
-            <div>
+            <span>
                 <Input/>
                 <Submit/>              
-            </div>
+            </span>
         )
     }
 }
