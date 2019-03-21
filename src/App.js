@@ -1,17 +1,18 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 import MenuAppBar from "./MenuAppBar"
+import InputContainer from "./InputContainer"
 
 class App extends Component {
   render() {
     return (
-        <div>
-          <MenuAppBar />
-          <br></br>test
+        <div className="react-desktop-app">
+          <header className="header-wrap"><MenuAppBar/></header>
+          <section className="input-container"><InputContainer/></section>
         </div>
 
     )
   }
 }
 
-export default App;
+export default App
