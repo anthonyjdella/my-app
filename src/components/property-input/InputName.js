@@ -1,8 +1,10 @@
 import React from "react"
-import { Typography, TextField } from "@material-ui/core";
-import { withStyles } from '@material-ui/core/styles'
+import { Typography, TextField } from "@material-ui/core"
 
-class Input extends React.Component {
+import Submit from "./Submit"
+import "./PropertyInput.css"
+
+class InputName extends React.Component {
    
     constructor() {
         super()
@@ -21,7 +23,7 @@ class Input extends React.Component {
 
     render() {
         return(
-            <div className="input-container">
+            <div className="property-input">
                 <Typography 
                     variant="h4"
                     style={{
@@ -47,8 +49,9 @@ class Input extends React.Component {
                     </form>
                 </div>
             </div>
+
         )
     }
 }
 
-export default Input
+export default InputName

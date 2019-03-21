@@ -1,6 +1,8 @@
 import React from "react"
-import Input from "./Input"
+import InputName from "./InputName"
+import { Route, NavLink, HashRouter } from "react-router-dom"
 import Submit from "./Submit"
+import "./PropertyInput.css"
 
 class InputContainer extends React.Component {
     constructor() {
@@ -10,8 +12,10 @@ class InputContainer extends React.Component {
     render() {
         return (
             <span>
-                <Input/>
-                <Submit/>              
+                <div className="input-container">
+                    <InputName/>
+                    <Submit/>
+                </div>
             </span>
         )
     }

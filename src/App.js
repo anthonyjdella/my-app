@@ -1,16 +1,15 @@
 import React, { Component } from 'react'
 import './App.css'
-import MenuAppBar from "./MenuAppBar"
-import InputContainer from "./InputContainer"
+import MenuAppBar from "./components/header/MenuAppBar"
+import InputContainer from "./components/property-input/InputContainer"
 
 class App extends Component {
   render() {
     return (
         <div className="react-desktop-app">
           <header className="header-wrap"><MenuAppBar/></header>
-          <section className="input-container"><InputContainer/></section>
+          <section className="property-description-container"><InputContainer/></section>
         </div>
-
     )
   }
 }

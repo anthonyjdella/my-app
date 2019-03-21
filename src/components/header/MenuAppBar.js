@@ -2,6 +2,7 @@ import React from "react"
 import { AppBar, IconButton, Toolbar, Typography } from "@material-ui/core"
 import MenuIcon from "@material-ui/icons/Menu"
 import { withStyles } from '@material-ui/core/styles'
+import "./Header.css"
 
 const styles = {
     menuButton: {
@@ -21,7 +22,7 @@ class MenuAppBar extends React.Component {
                             <MenuIcon />
                         </IconButton>
                         <Typography variant="h5" color="inherit">
-                            Reindeer
+                            REINDEER
                         </Typography>
                     </Toolbar>
                 </AppBar>
