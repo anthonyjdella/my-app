@@ -4,8 +4,8 @@ import Button from "@material-ui/core/Button"
 import {LETS_GO, CONTINUE, SUBMIT} from "../../common/Constants"
 
 class ContinueButton extends React.Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
     }
 
     buttonText(page){
@@ -22,6 +22,8 @@ class ContinueButton extends React.Component {
     }
     
     render() {
+        const {func} = this.props
+        
         return(
             <div className="continue-wrap">
                 <div className="continue-button">
@@ -30,7 +32,9 @@ class ContinueButton extends React.Component {
                             name="continueButton"
                             // component={Link}
                             // to={this.state.routeTo}
-                            // onClick={this.handleClick} 
+                            // onClick={this.handleClick}
+                            //onclick={this.props.func} 
+                            onClick={func}
                             variant="contained" 
                             color="secondary">
                             

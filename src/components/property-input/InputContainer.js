@@ -77,7 +77,6 @@ class InputContainer extends React.Component {
                     <div className="input-container">
                         <Typography 
                             variant="h4"
-                            onClick={this.updatePage}
                             style={{
                                 paddingBottom: '60px'
                             }}
@@ -86,12 +85,7 @@ class InputContainer extends React.Component {
                             {this.questionText(this.state.page[this.state.pageNumber - 1])}
                             
                         </Typography>
-                        {/* <BrowserRouter>
-                            <Route path="/start/0" component={InputType}/>    
-                            <Route path="/start/1" component={InputName} />
-                            <Route path="/start/2"  />       
-                        </BrowserRouter> */}
-                    <ContinueButton/>
+                    <ContinueButton func={this.updatePage}/>
                     </div>
                 </span>
             </section>
