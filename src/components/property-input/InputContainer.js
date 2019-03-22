@@ -15,16 +15,16 @@ class InputContainer extends React.Component {
     render() {
         return (
             <section className="property-description-container">
-                <BrowserRouter>
                 <span>
                     <div className="input-container">
+                        <BrowserRouter>
                             <Route path="/start/0" component={InputType}/>    
                             <Route path="/start/1" component={InputName} />
                             <Route path="/start/2"  />       
-                        <Submit/>
+                            {/* <Submit/> */}
+                        </BrowserRouter>
                     </div>
                 </span>
-                </BrowserRouter>
             </section>
         )
     }

@@ -48,8 +48,8 @@ class InputName extends React.Component {
                         />
                     </form>
                 </div>
+                <Submit/>
             </div>
-
         )
     }
 }

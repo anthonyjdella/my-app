@@ -8,7 +8,7 @@ class Submit extends React.Component {
     constructor(){
         super()
         this.state = {
-            routeTo: "/start/0",
+            routeTo: "/start/1",
             buttonText: "Let's go"
         }
         this.handleClick = this.handleClick.bind(this)

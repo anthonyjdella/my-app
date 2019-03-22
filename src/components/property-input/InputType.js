@@ -1,10 +1,15 @@
 import React from "react"
 
+import Submit from "./Submit"
+
 class InputType extends React.Component {
 
     render() {
         return(
-            "HELLLLLLLLO"
+            <div>
+                Hi
+                <Submit/>
+            </div>
         )
     }
 }
