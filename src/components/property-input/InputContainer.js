@@ -19,17 +19,19 @@ import {
 import ContinueButton from "./ContinueButton"
 
 const pages = {
-    a: "propertyType",
-    b: "propertyName",
-    c: "propertyAddress",
-    d: "purchasePrice"
+    0: "propertyType",
+    1: "propertyName",
+    2: "propertyAddress",
+    3: "purchasePrice"
 }
 
 class InputContainer extends React.Component {
     constructor() {
         super()
         this.state={
-            page: pages.a
+            click:0,
+            pageNumber: 1,
+            page: ["propertyType"]
         }
         this.updatePage = this.updatePage.bind(this)
     }
@@ -50,11 +52,21 @@ class InputContainer extends React.Component {
     }
 
     updatePage(){
-        const arrayOfPages = Object.keys(pages).map(function(i) {
-            return pages[i]
+        this.setState(prevState => {
+            return {
+                click: prevState.click + 1
+            }
         })
-        this.setState({
-            page: arrayOfPages
+        this.setState(prevState => {
+            const updatePageList = prevState.page.slice()
+            for(let i=this.state.click; i<prevState.page.length; i++) {
+                updatePageList.push(pages[prevState.page.length])
+            }
+
+            return ({
+                pageNumber: prevState.pageNumber + 1,
+                page: updatePageList
+            })
         })
     }
 
@@ -71,9 +83,8 @@ class InputContainer extends React.Component {
                             }}
                             color="textPrimary">
 
-                            {this.questionText(this.state.page)}
+                            {this.questionText(this.state.page[this.state.pageNumber - 1])}
                             
-                            <h1>{this.state.page}</h1>
                         </Typography>
                         {/* <BrowserRouter>
                             <Route path="/start/0" component={InputType}/>    
