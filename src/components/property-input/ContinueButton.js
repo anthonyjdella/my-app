@@ -22,7 +22,7 @@ class ContinueButton extends React.Component {
     }
     
     render() {
-        const {func} = this.props
+        const {func, props} = this.props
         
         return(
             <div className="continue-wrap">
@@ -30,15 +30,11 @@ class ContinueButton extends React.Component {
                     <form>
                         <Button
                             name="continueButton"
-                            // component={Link}
-                            // to={this.state.routeTo}
-                            // onClick={this.handleClick}
-                            //onclick={this.props.func} 
                             onClick={func}
                             variant="contained" 
                             color="secondary">
                             
-                            {this.buttonText()}
+                            {this.buttonText(props.page[1])}
                         </Button>
                     </form>
                 </div>

@@ -85,7 +85,7 @@ class InputContainer extends React.Component {
                             {this.questionText(this.state.page[this.state.pageNumber - 1])}
                             
                         </Typography>
-                    <ContinueButton func={this.updatePage}/>
+                    <ContinueButton func={this.updatePage} props={this.state}/>
                     </div>
                 </span>
             </section>
