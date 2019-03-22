@@ -16,6 +16,7 @@ class MenuAppBar extends React.Component {
     render() {
         const {classes} = this.props
         return (
+                <header className="header-wrap" >
                 <AppBar color="primary" position="static">
                     <Toolbar>
                         <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
@@ -26,6 +27,7 @@ class MenuAppBar extends React.Component {
                         </Typography>
                     </Toolbar>
                 </AppBar>
+                </header>
         )
     }
 }

@@ -1,8 +1,11 @@
 import React from "react"
-import InputName from "./InputName"
-import { Route, NavLink, HashRouter } from "react-router-dom"
-import Submit from "./Submit"
+import { Route, BrowserRouter, Redirect } from "react-router-dom"
+
 import "./PropertyInput.css"
+
+import InputName from "./InputName"
+import InputType from "./InputType"
+import Submit from "./Submit"
 
 class InputContainer extends React.Component {
     constructor() {
@@ -11,12 +14,18 @@ class InputContainer extends React.Component {
 
     render() {
         return (
-            <span>
-                <div className="input-container">
-                    <InputName/>
-                    <Submit/>
-                </div>
-            </span>
+            <section className="property-description-container">
+                <BrowserRouter>
+                <span>
+                    <div className="input-container">
+                            <Route path="/start/0" component={InputType}/>    
+                            <Route path="/start/1" component={InputName} />
+                            <Route path="/start/2"  />       
+                        <Submit/>
+                    </div>
+                </span>
+                </BrowserRouter>
+            </section>
         )
     }
 }
